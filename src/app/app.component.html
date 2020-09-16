@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let box of [].constructor(6); let i = index;" class="col-md-4 mt-5">
+      <div *ngIf="(filesUrl.length > i) else noImageSelected" class="image-container">
+        <img [src]="filesUrl[i]" alt="" class="img">
+        <button class="remove-button btn btn-danger" (click)="onRemove(i)">Remove Image</button>
+      </div>
+      <ng-template #noImageSelected>
+        <div class="no-image" (click)="fileSelector.click()">
+          <img src="assets/images/scale.svg">
+        </div>
+      </ng-template>
+    </div>
+
+    <input type="file" #fileSelector [hidden]="true" (change)="onImageChange($event)">
+  </div>
+</div>

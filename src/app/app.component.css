@@ -1,0 +1,27 @@
+.col-md-4 {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.image-container, .no-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.remove-button {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 100;
+}
+.image-container {
+  padding: 2%;
+  border: 1px solid #5558ff;
+}
+.no-image {
+  text-align: center;
+}
